@@ -1,16 +1,72 @@
-# React + Vite
+# 📸 InstaClone Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive social media application frontend built with the latest React ecosystem. This project mimics core Instagram functionality including a feed, user authentication, and profile management.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project uses a cutting-edge stack focused on performance and developer experience:
 
-## React Compiler
+- **Framework:** [React 19](https://react.dev/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **UI Library:** [Shadcn/UI](https://ui.shadcn.com/) (based on Radix UI)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **State Management:** [Redux Toolkit](https://redux-toolkit.js.org/)
+- **Routing:** [React Router DOM v7](https://reactrouter.com/)
+- **HTTP Client:** [Axios](https://axios-http.com/)
+- **Notifications:** [Sonner](https://sonner.emilkowal.ski/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **Authentication:** - Login and Signup pages with form validation.
+  - Redux integration for managing user sessions.
+- **Responsive Layout:** - Sidebar navigation for desktop.
+  - Bottom navigation bar for mobile devices.
+- **Feed System:**
+  - Scrollable post feed.
+  - Post interaction UI (Like, Comment, Share, Save).
+- **Interactive Components:**
+  - Dialog modals for comments and post details.
+  - Hover cards and optimized Avatar components.
+- **Dark Mode Support:** (Configured via Tailwind CSS variables).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Installation & Setup
+
+Follow these steps to clone and run the project locally.
+
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm or yarn
+
+### 1. Clone the Repository
+```bash
+git clone <your-repo-url>
+cd instaclone_frontend
+
+2. Install Dependencies
+Bash
+
+npm install
+3. Configure Environment
+Create a .env file in the root directory if your API endpoints are dynamic. By default, the project points to localhost:8000.
+
+4. Run the Development Server
+Bash
+
+npm run dev
+The app will typically start at http://localhost:5173.
+
+📂 Project Structure
+src/
+├── assets/          # Static images and icons
+├── components/      
+│   ├── Auth_Components/  # Login/Signup forms
+│   ├── comp/             # Feed, Post, and Home components
+│   ├── outlates/         # Page layouts (Feed, Profile, Create)
+│   ├── sideBar/          # Navigation (Sidebar, RightSidebar)
+│   └── ui/               # Reusable Shadcn UI components (Buttons, Dialogs, etc.)
+├── lib/             # Utility functions (cn class merger)
+├── redux/           # Redux slices and store configuration
+├── App.jsx          # Main application component with Routes
+├── MainLayout.jsx   # Layout wrapper with Sidebar
+└── index.css        # Tailwind directives and global styles
