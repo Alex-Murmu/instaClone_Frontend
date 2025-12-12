@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'sonner'
 import { useSelector } from 'react-redux'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import Create from '../outlates/Create'
 
 
 
@@ -109,29 +110,7 @@ export default function SideBar() {
                         )
                     } if(item.text==="Create"){
                         return (
-                            <div key={index} className='cursor-pointer p-3 hover:bg-neutral-100 rounded-lg'>
-                                <Dialog>
-                                    <DialogTrigger>
-                                        <div className='cursor-pointer flex  gap-4 items-center '>
-                                            <div>{item.icon}</div>
-                                        </div>
-                                    </DialogTrigger>
-                                    <DialogContent className="h-96">
-                                        <div className='flex items-center h-fit gap-5 '>
-                                            <Avatar>
-                                                <AvatarFallback><CloudUpload /></AvatarFallback>
-                                            </Avatar>
-                                                 <div>
-                                                    <p className='font-semibold text-sm '>Upload Files</p>
-                                                    <p className='text-xs text-neutral-400'>Select and upload files oof Your chooise</p>
-                                                 </div>
-                                        </div>
-                                        <div className='border h-70 flex items-center justify-center'>
-                                            <input type="file" name="" id="" className='border rounded-md pl-3 cursor-pointer hover:bg-neutral-200 active:bg-gray-600' />
-                                        </div>
-                                    </DialogContent>
-                                </Dialog>
-                            </div>
+                            <Create />
                         )
                     }
                     

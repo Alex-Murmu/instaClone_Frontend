@@ -10,7 +10,7 @@ export default function Profile() {
   const { user } = useSelector(store => store.auth);
 
   // Dummy Data for Post Grid
-  const dummyPosts = Array(15).fill({ id: 1, likes: 100, comments: 20 });
+  const dummyPosts = Array(9).fill({ id: 1, likes: 100, comments: 20 });
   
   // Hardcoded profile stats for UI demonstration
   const stats = { posts: 15, followers: '1.2K', following: 350 };
